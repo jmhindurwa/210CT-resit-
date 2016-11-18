@@ -1,0 +1,10 @@
+n 
+  prime finder (count)
+      count <- n-1 
+          n/count
+            if output <- integer
+              retrun FALSE 
+            else
+              run prime finder (count)
+                if count <- 1
+                  return TRUE
