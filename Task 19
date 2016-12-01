@@ -1,0 +1,24 @@
+Task 10. Given a sequence of n integer numbers, extract the sub-sequence of maximum length which is in ascending order. 
+
+def maxseq(sequence):
+    a = [] 				#empty list to which program adds increasing sequence
+    b = [] 				#list that stores longest increasing sub-sequence
+
+    for i in range (0, len(oriseq)): 	#a loop that goes through the original sequence
+        current = oriseq[i]     	#points to the first element
+        last = oriseq[i-1]      		#points to the element before
+        if current > last:     
+            a.append(current)    	#adds current element to a
+        elif len(a) > len(b):  
+            b = a             		#if a is lower than b then b becomes a
+            a = [current]
+        else:
+            a = [current]
+    if len(b) < len(a):        		#checks if b is greater than a
+        return a
+    else:
+        return b                     
+    
+
+oriseq = [1,2,3,1,4,5,6,7,8,1,9]
+print (maxseq(oriseq))
