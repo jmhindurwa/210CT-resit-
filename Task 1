@@ -1,0 +1,9 @@
+#Task 1: Write a function that randomly shuffles an array of integers and explain the rationale behind its implementation.
+a = [1,2,3,4,5,6,7,8] 
+import random            
+for b in range(0,8):   
+            c = random.randint(0,b)   	#makes temp list of numbers
+            if c == b:			
+                continue
+            a[b], a[c] = a[c], a[b]   	#swaps  temp numbers with actual 
+print(a)                   
