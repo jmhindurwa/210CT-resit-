@@ -1,0 +1,15 @@
+Task 3: Write the pseudocode for a function which returns the highest perfect square which is less or equal to its parameter (a positive integer). Implement this in a programming language of your choice.
+def hpsfinder(x):
+    z = x
+    y = x * x
+    while y > x:    	#while y is more than z keep dividing z until you find a perfect square
+        z = z //2
+        y = z * z
+    while y < x:    #while y is less than z add 1 to z until the square is larger than start number
+        z = z + 1
+        y = z * z
+    z = z - 1        # minus 1 and square the result to find the closest perfect square less the start
+    y = z * z
+    return y
+
+print(hpsfinder(n)) #replace n with starting number 
