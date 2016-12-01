@@ -1,0 +1,20 @@
+7. Write a recursive function (pseudocode and code) to check if a number n is prime (hint: check whether n is divisible by any number below n). 
+
+Pseudocode:
+x<-starting number ()
+	if x<1
+	   check numbers from 2 to x	# these <- y 
+		IF x/y is equal to 0
+			Print False
+	ELSE
+		PRINT True
+
+python:
+x = 5   
+if x > 1:   
+    for y in range (2,x):   
+        if (x % y) == 0:
+            print ("False") 
+            break       
+    else:
+            print ("True")	
