@@ -1,0 +1,11 @@
+Task 8
+def vowelremover(word,base=0): 
+    if base == (len(word)):
+        return word
+    elif word[0].lower() in ["a","e","i","o","u"]: 
+        return vowelremover(word[1:],base)
+    else:
+        return vowelremover((word[1:]+word[0]),base+1) 
+
+print(vowelremover("Beautiful"))
+
