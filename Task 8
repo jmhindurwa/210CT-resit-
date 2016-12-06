@@ -1,11 +1,11 @@
 Task 8
 def vowelremover(word,base=0): 
-    if base == (len(word)):
+    if base == (len(word)): # checks if base value is equal to list size
         return word
-    elif word[0].lower() in ["a","e","i","o","u"]: 
-        return vowelremover(word[1:],base)
+    elif word[0].lower() in ["a","e","i","o","u"]: # Check if current position in list is a vowel
+        return vowelremover(word[1:],base)       # return list apart from position 0
     else:
-        return vowelremover((word[1:]+word[0]),base+1) 
+        return vowelremover((word[1:]+word[0]),base+1)  # return list but with n[0] at end so i.e. input vowels = owelsv
 
-print(vowelremover("Beautiful"))
+print(vowelremover("Beautiful"))    
 
