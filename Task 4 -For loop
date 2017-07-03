@@ -1,0 +1,11 @@
+number_string = input("Enter some numbers: ") #prompts user to input the digits to be solved 
+number_list = [0]                           # Create List
+total = 0                                   # Create variable to use as accumulator
+for num in number_string:                   # Use for loop to take single int from string and put in list
+    number_list.append(int(num))
+for value in number_list:                   # Sum the list
+    total += value
+
+print(total)
+
+
