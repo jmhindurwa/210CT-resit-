@@ -1,0 +1,35 @@
+"""merge part of algorithm"""
+def merge(left, right):
+	if not len(left) or not len(right):
+		return left or right
+
+	result = []
+	a, b = 0, 0
+	while (len(result) < len(left) + len(right)):
+		if left[a] < right[b]:
+			result.append(left[a])
+			a+= 1
+		else:
+			result.append(right[b])
+			b+= 1
+		if a == len(left) or b == len(right):
+			result.extend(left[a:] or right[b:])
+			break 
+
+	return result
+
+"sorting part of algorithm" 
+def merge_sort(list):
+	if len(list) < 2:                   #this is the base case
+		return list
+
+	mid = int(len(list)/2)
+	left = merge_sort(list[:mid])
+	right = merge_sort(list[mid:])
+
+	return merge(left, right)
+
+if __name__ == "__main__":
+  print( merge_sort([9,8,1,2,8,3,7,6]) ) #prints values from list now im correct order
+
+# Big o - O(nlogn)
