@@ -1,0 +1,12 @@
+print "The next 20 leap years are.."
+def leap_yearfind(year):                        #defines function
+    i = 0                   
+    while i < 20:                               #lists the first 20 results 
+        if year % 4 != 0 and year % 400 != 0:   #if year value is not divisable by 4 and 400 
+            year +=1                            #take the year value and add one 
+        elif year % 100 != 0:                   #if year value is not divisable by 100
+            year +=1                            #take the year value and add one 
+            print("%s") % (year),
+            i += 1
+
+leap_yearfind(2017)   
