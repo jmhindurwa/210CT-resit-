@@ -1,0 +1,7 @@
+def TotalRecursive(n):          #defines function 
+    if len(n)==0:       #if there is no numbers in the list or if the only number is 0 return 0 
+        return 0
+    else:
+        return n[0] + TotalRecursive(n[1:])  
+print TotalRecursive([3, 4, 2, 5, 6])   #prints the result of the numbers in the given list
+ 
