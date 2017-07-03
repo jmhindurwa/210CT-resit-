@@ -1,0 +1,5 @@
+num = input("Enter a number: ") #Asks user to input a numbe 
+def numDigits(n):
+    n_str = str (n)             #converts input into a string
+    return len(n_str)           #returns the length of the string 
+print "There are",(numDigits(num)),"digits in this number"  #prints result 
