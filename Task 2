@@ -1,0 +1,9 @@
+def Task2():
+    l=[]                                    
+    for x in range(1000, 3001):             		#I is what will give the result ,
+        if (x%5==0) and (x%7!=0):         		#checks if number is %by 5 and not a multiple of 7
+            l.append(str(x))                		#changes it to string so it can be printed 
+    print "The following values are divisible by 5 but not multiples of 7.."
+    print ','.join(l)                       			#comma separates all results with a comma 
+
+Task2()                                        		#join(I) joins the results with the comma separating it
